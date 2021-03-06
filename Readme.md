@@ -1,9 +1,16 @@
-# Cloudflare Dynamic IP DNS Updater
+# Cloudflare ☁️ Dynamic IP DNS Updater
 
 This tool allow you to have a specific DNS record such as `home.example.com` that point to your home IP
 
+
+#### Use Case
+I suggest you to install it on a Raspberry Pi!🍓
+
 ### Requirements
 
+- Domain Name
+- [Cloudflare Account](https://www.cloudflare.com/) 
+- Raspberry Pi4 or any other Linux Based OS
 - `composer`
 - `php-7.3`
 
