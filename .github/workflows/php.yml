@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Deploy Check Cloudflare Dynamic IP
 
 on:
   push:
@@ -27,13 +27,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
-    
-    - name: Test CF-IP script 
-      run: ./cf-ip 
+      run: composer install --prefer-dist --no-progress --no-suggest --no-dev
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
-    # - name: Run test suite
-    #   run: composer run-script test
+    - name: Run test suite
+      run: composer run-script test

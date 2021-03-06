@@ -1,4 +1,7 @@
 {
+    "name": "adnp97/cloudflare-dynamic-ip",
+    "description": "Cloudflare DDNS script for Raspberry Pi 4 or RHEL/Debian/Ubuntu",
+    "license": "none",
     "require": {
         "php": "^7.3",
         "cloudflare/sdk": "^1.1",
@@ -12,6 +15,9 @@
     "scripts": {
         "post-autoload-dump": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "test": [
+            "./cf-ip"
         ]
     }
 }
