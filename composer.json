@@ -1,5 +1,6 @@
 {
     "require": {
+        "php": "^7.3",
         "cloudflare/sdk": "^1.1",
         "vlucas/phpdotenv": "^5.3",
         "guzzlehttp/guzzle": "^6.2.2"

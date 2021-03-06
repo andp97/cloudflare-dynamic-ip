@@ -10,12 +10,12 @@ use Exception;
 
 class CloudflareWrapper
 {
-    private string $token = '';
-    private string $zone_id = '';
-    private string $zone_name = '';
-    private Guzzle $cf_api;
-    private string $record_name = '';
-    private string $record_ip = '';
+    private $token = '';
+    private $zone_id = '';
+    private $zone_name = '';
+    private $cf_api;
+    private $record_name = '';
+    private $record_ip = '';
     
 
     /**

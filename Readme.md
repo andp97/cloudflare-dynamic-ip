@@ -5,7 +5,7 @@ This tool allow you to have a specific DNS record such as `home.example.com` tha
 ### Requirements
 
 - `composer`
-- `php-7.4`
+- `php-7.3`
 
 ### Installation
 ```
