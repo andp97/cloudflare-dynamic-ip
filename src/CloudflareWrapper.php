@@ -10,7 +10,6 @@ use Exception;
 
 class CloudflareWrapper
 {
-    private string $email = '';
     private string $token = '';
     private string $zone_id = '';
     private string $zone_name = '';
@@ -62,8 +61,7 @@ class CloudflareWrapper
         try {
             $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__.'/../');
             $dotenv->load();
-            $dotenv->required(['CLOUDFLARE_EMAIL', 'CLOUDFLARE_TOKEN', 'DNS_RECORD_NAME']);
-            $this->email = $_ENV['CLOUDFLARE_EMAIL'];
+            $dotenv->required(['CLOUDFLARE_TOKEN']);
             $this->token = $_ENV['CLOUDFLARE_TOKEN'];
             $this->record_name = $_ENV['DNS_RECORD_NAME'];
             $key = new APIToken($this->token);
@@ -81,11 +79,11 @@ class CloudflareWrapper
      */
     private function loadcli(): void{
         if(!$this->checkRequiredEnv()){
-            throw new Exception("Error empty required ENV CLOUDFLARE_EMAIL CLOUDFLARE_TOKEN");
+            throw new Exception("Error empty required CLOUDFLARE_TOKEN");
         }
         $this->loadZoneID();
 
-        if(!empty($argv[1])){
+        if(isset($argv[1]) && !empty($argv[1])){
             $this->record_name = $argv[1];
         }
 
@@ -93,7 +91,7 @@ class CloudflareWrapper
             throw new Exception( "empty DNS_RECORD_NAME or record_name");
         }
         
-        if(!empty($argv[2] ?? '')){
+        if(isset($argv[2]) && !empty($argv[2])){
             $this->record_ip = $argv[2];
         }else{
             $this->record_ip = PublicIP::get();    
@@ -132,7 +130,7 @@ class CloudflareWrapper
      * @return bool
      */
     private function checkRequiredEnv(): bool{
-        if(empty($this->email) || empty($this->token)){
+        if(empty($this->token)){
             return false;
         }else{
             return true;
