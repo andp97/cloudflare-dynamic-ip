@@ -12,7 +12,7 @@ This tool allow you to have a specific DNS record such as `home.example.com` tha
 git clone https://github.com/andp97/cloudflare-dynamic-ip.git
 cd cloudflare-dynamic-ip
 INSTALL_PATH=$(pwd)
-composer install
+composer install --no-dev
 nano .env
 echo -e "*/15 * * * * $INSTALL_PATH/cf-ip 2&1> /dev/null\n"
 crontab -e
