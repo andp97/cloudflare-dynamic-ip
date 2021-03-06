@@ -25,6 +25,7 @@ class CloudflareWrapper
         try {
             $this->loadcli();
             $this->editDNSRecord($this->record_name,$this->record_ip);
+            echo "$this->record_name.$this->zone_name\tIN\tA\t$this->record_ip\n";
         }catch (Exception $ex){
             echo $ex->getMessage();
             exit(1);
