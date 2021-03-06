@@ -1,0 +1,17 @@
+{
+    "require": {
+        "cloudflare/sdk": "^1.1",
+        "vlucas/phpdotenv": "^5.3",
+        "guzzlehttp/guzzle": "^6.2.2"
+    },
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "cp .env.example .env",
+            "composer dump-autoload",
+            "chmod u+x cf-ip"
+        ]
+    }
+}
