@@ -21,7 +21,7 @@ cd cloudflare-dynamic-ip
 INSTALL_PATH=$(pwd)
 composer install --no-dev
 nano .env
-echo -e "*/15 * * * * $INSTALL_PATH/cf-ip 2&1> /dev/null\n"
+echo -e "*/15 * * * * $INSTALL_PATH/cf-ip 2>&1 > /dev/null\n"
 crontab -e
 ```
 
