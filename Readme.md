@@ -1,4 +1,4 @@
-# Cloudflare ☁️ Dynamic IP DNS Updater
+# Cloudflare ☁️ Dynamic DNS IP Updater
 
 This tool allow you to have a specific DNS record such as `home.example.com` that point to your home IP
 
