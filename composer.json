@@ -3,7 +3,7 @@
     "description": "Cloudflare DDNS script for Raspberry Pi 4 or RHEL/Debian/Ubuntu",
     "license": "none",
     "require": {
-        "php": "^7.3",
+        "php": "^7.3|^8.0",
         "cloudflare/sdk": "^1.2",
         "vlucas/phpdotenv": "^5.3",
         "guzzlehttp/guzzle": "^7.0.1"
