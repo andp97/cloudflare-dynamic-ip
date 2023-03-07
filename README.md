@@ -31,7 +31,7 @@ EOF
 
 #### Crontab setup
 ```shell
-echo -e "*/15 * * * * <install_dir>/cf-ip 2>&1 > /dev/null\n"
+echo -e "*/15 * * * * <install_dir>/cloudflare-ddns 2>&1 > /dev/null\n"
 crontab -e
 ```
 
