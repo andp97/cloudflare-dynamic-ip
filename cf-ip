@@ -1,3 +1,3 @@
 #!/bin/bash
-echo -n  "[DEPRECATED] Please see the upgrading guide: https://github.com/andp97/cloudflare-dynamic-ip/UPGRADE.md"
+echo -n  "[DEPRECATED] Please see the upgrading guide: https://github.com/andp97/cloudflare-dynamic-ip/blob/v2/UPGRADE.md"
 exit 255

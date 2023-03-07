@@ -72,6 +72,8 @@ On `.env` file you can set:
 - `CLOUDFLARE_ZONE_NAME` or `CLOUDFLARE_ZONE_ID`
 - `DNS_RECORD_NAME` is the subdomain that you prefer to use (for example: **home**.example.com). If you prefer to be safer use a randomized token for the `DNS_RECORD_NAME`
 
+### Upgrading from `v1.x`?
+[UPGRADE.md](https://github.com/andp97/cloudflare-dynamic-ip/blob/v2/UPGRADE.md)
 
 ### Update
 ```
