@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'font' => \LaravelZero\Framework\Components\Logo\FigletString::DEFAULT_FONT,
+    'font' => resource_path('fonts/rounded.flf'),
 
     /*
     |--------------------------------------------------------------------------
