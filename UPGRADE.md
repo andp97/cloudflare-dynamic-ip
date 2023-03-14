@@ -23,6 +23,6 @@ Follow these steps:
 [user@host]$ cp /opt/cloudflare-dynamic-ip/.env cf-env.txt
 [user@host]$ rm -rf /opt/cloudflare-dynamic-ip/
 [user@host]$ mkdir "cloudflare-ddns" && cd cloudflare-ddns
-[user@host]$ curl -s -o cloudflare-ddns https://github.com/andp97/cloudflare-dynamic-ip/blob/v2/builds/cloudflare-ddns
+[user@host]$ curl -s -o cloudflare-ddns https://github.com/andp97/cloudflare-dynamic-ip/releases/download/v2.0.0/cloudflare-ddns
 [user@host]$ cp ../cf-env.txt .env
 ```

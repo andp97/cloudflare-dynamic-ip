@@ -18,7 +18,7 @@ I suggest you to install it on a Raspberry Pi!🍓
 #### Download
 ```
 mkdir cloudflare-ddns && cd cloudflare-ddns
-curl -s -o cloudflare-ddns https://raw.githubusercontent.com/andp97/cloudflare-dynamic-ip/v2/builds/cloudflare-ddns
+curl -s -o cloudflare-ddns https://github.com/andp97/cloudflare-dynamic-ip/releases/download/v2.0.0/cloudflare-ddns
 ```
 #### `.env` setup
 ```shell
