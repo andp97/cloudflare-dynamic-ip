@@ -1,4 +1,4 @@
-name: Add build file on release
+name: "Add build file on release"
 
 on:
   push:
