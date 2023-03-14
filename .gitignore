@@ -3,3 +3,4 @@ composer.lock
 .env
 vendor/
 cf-ip
+.phpunit.result.cache
