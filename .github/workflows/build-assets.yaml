@@ -4,8 +4,6 @@ on:
   push:
     tags:
       - "v*.*"
-    branches:
-      - "v2"
 jobs:
   build:
     runs-on: ubuntu-latest
