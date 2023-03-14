@@ -2,10 +2,10 @@ name: "Add build file on release"
 
 on:
   push:
-    #tags:
-    #  - "v*.*"
+    tags:
+      - "v*.*"
     branches:
-      - "*"
+      - "v2"
 jobs:
   build:
     runs-on: ubuntu-latest
