@@ -32,6 +32,9 @@ jobs:
       - name: Build php-bin app
         run: php cloudflare-ddns app:build --build-version=${{ github.ref_name }} cloudflare-ddns
 
+      - name: Add execute privileges
+        run: chmod +x builds/cloudflare-ddns
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
