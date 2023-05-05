@@ -4,6 +4,7 @@ namespace App\Commands;
 
 use Illuminate\Support\Facades\Http;
 use LaravelZero\Framework\Commands\Command;
+use Termwind\Termwind;
 use function Termwind\{render};
 use Cloudflare\API\Auth\APIToken;
 use Cloudflare\API\Adapter\Guzzle as Adapter;
@@ -115,12 +116,15 @@ class CloudflareCommand extends Command
             $this->error('Error from Cloudflare API: ' . $throwable->getMessage());
             exit(255);
         }
+        render(<<<HTML
+        <div class="py-1 ml-2">
+            <div class="px-1 bg-green-600 text-black">Cloudflare Updated ✔</div>
+            <em class="ml-1">
+            Record <span class="font-bold">$record_name</span> from <span class="font-bold">$current_value</span> to <span class="font-bold">$target_ip</span>
+            </em>
+        </div>
+HTML);
 
-        render(view('cloudflare.update', [
-            'old_ip' => $current_value,
-            'new_ip' => $target_ip,
-            'record' => $record_name
-        ]));
     }
 
 }
