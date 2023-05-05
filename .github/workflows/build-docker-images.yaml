@@ -25,6 +25,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          build-args:
+          build-args: |
             APP_VERSION: ${{ github.ref_name }}
           tags: andp97/cloudflare-ddns:latest
