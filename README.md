@@ -36,7 +36,7 @@ crontab -e
 ```
 
 ### Run script
-Get dns record name from env and target ip from remote host (https://ip.andp97.dev/api/vs) 
+Get dns record name from env and target ip from remote host (https://ip.andp97.dev/api/v2) 
 ```shell
 ./cloudflare-ddns
 ```
